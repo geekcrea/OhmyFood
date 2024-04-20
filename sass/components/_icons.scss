@@ -1,0 +1,43 @@
+.fas {
+  margin: 1rem;
+}
+
+/* HEADER - PAGES DE MENU */
+.fa-arrow-left {
+  font-size: 1.2rem;
+  margin: 0.5rem;
+}
+
+/* FONCTIONNEMENT - INDEX */
+.instructions__item > .fas {
+  color: $grey-icons;
+}
+.fa-mobile-alt {
+  font-size: 1.4rem;
+}
+.fa-list-ul {
+  font-size: 1.2rem;
+}
+
+/* COCHE - PAGE DE MENU */
+.fa-check-circle {
+  color: white;
+  font-size: 1.3rem;
+  @include breakpoints(tab) {
+    font-size: 1.7rem;
+  }
+  @include breakpoints(desktop) {
+    font-size: 1.5rem;
+  }
+}
+
+/* FOOTER */
+.list__item > .fas {
+  margin: 0rem 0.7rem 0rem 0rem;
+}
+.fa-utensils {
+  font-size: 0.9rem;
+}
+.fa-hands-helping {
+  font-size: 0.7rem;
+}

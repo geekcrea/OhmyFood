@@ -1,0 +1,59 @@
+@mixin breakpoints($screen) {
+  @if ($screen == tab) {
+    @media screen and (min-width: map-get($map: $breakpoints, $key: tab)) {
+      @content;
+    }
+  } @else if ($screen == desktop) {
+    @media screen and (min-width: map-get($map: $breakpoints, $key: desktop)) {
+      @content;
+    }
+  }
+}
+
+@mixin box-shadow($state) {
+  @if ($state == normal) {
+    box-shadow: 3px 5px 5px black-shadow-hue(light);
+  } @else if ($state == hover) ⎮⎮ ($state == focus) {
+    box-shadow: 3px 5px 5px black-shadow-hue(dark);
+  }
+}
+@mixin btn-shadow($state) {
+  @if ($state == btn-normal) {
+    box-shadow: 3px 5px 5px black-shadow-hue(dark);
+  } @else if ($state == btn-hover) ⎮⎮ ($state == btn-focus) {
+    box-shadow: 3px 5px 5px black-shadow-hue(darker);
+  }
+}
+
+@mixin pseudo-pos {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin text-overflow {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin courses-unveiling {
+  animation: courses-unveiling 900ms ease-out backwards;
+  @for $i from 0 through 2 {
+    &--#{$i} {
+      animation-delay: 300ms * $i;
+    }
+  }
+}
+
+@mixin dishes-unveiling {
+  animation: dishes-unveiling 900ms ease-out backwards;
+  @for $i from 0 through 9 {
+    &--#{$i} {
+      animation-delay: 100ms * $i;
+    }
+  }
+}

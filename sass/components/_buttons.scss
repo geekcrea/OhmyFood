@@ -1,0 +1,67 @@
+/* BOUTON PRINCIPAL */
+.btn {
+  color: white;
+  background: $colors-gradient;
+  padding: 1rem;
+  border-radius: $bd-rad + 10;
+  @include btn-shadow(btn-normal);
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  &--menus {
+    width: 10rem;
+  }
+  &:hover {
+    opacity: 0.8;
+    @include btn-shadow(btn-hover);
+  }
+}
+
+/* BOUTON J'AIME */
+.menu-prev__btn {
+  grid-area: heart;
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  margin: auto 1.5rem auto auto;
+  &__img {
+    width: 1.5rem;
+  }
+  & > .empty {
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(1, 0, 0.4, 1) 200ms;
+  }
+  & > .filled {
+    position: absolute;
+    top: 0.16rem;
+    left: 0.45rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 400ms cubic-bezier(0.74, -0.12, 0.46, 0.47);
+  }
+  @include breakpoints(desktop) {
+    &:hover {
+      & > .empty {
+        opacity: 0;
+      }
+      & > .filled {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+  &:focus,
+  &:active {
+    & > .empty {
+      opacity: 0;
+    }
+    & > .filled {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}

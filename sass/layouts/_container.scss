@@ -1,0 +1,18 @@
+.container {
+  margin: 0rem -0.5rem;
+  &--md {
+    background: map-get($bg-greys, md);
+  }
+  &--light {
+    background: map-get($map: $bg-greys, $key: light);
+    padding: 1rem 0 3rem 0;
+  }
+  &--white {
+    padding: 2rem 1rem 3rem 1rem;
+  }
+  &--menus {
+    border-radius: $bd-rad + 10 $bd-rad + 10 0px 0px;
+    margin-top: -3rem;
+    padding: 1rem 1rem 4rem 1rem;
+  }
+}

@@ -1,0 +1,171 @@
+.courses {
+  display: flex;
+  flex-direction: column;
+  &-prev {
+    margin: -0.3rem -0.5rem 0rem -0.5rem;
+    overflow: hidden;
+    &__heading {
+      display: none;
+    }
+    &__image {
+      object-fit: cover;
+      width: 107%;
+      height: 16rem;
+      object-position: center left;
+      @include breakpoints(tab) {
+        height: 20rem;
+      }
+      &--portrait {
+        width: 100%;
+        @include breakpoints(tab) {
+          height: 20rem;
+        }
+      }
+    }
+  }
+}
+.heading {
+  display: flex;
+  justify-content: space-between;
+  margin: -1rem -1rem -1rem 0rem;
+  &__title {
+    font-family: "Shrikhand", cursive;
+    font-weight: 300;
+    font-size: 1.8rem;
+    width: 90%;
+  }
+}
+
+.courses-grid {
+  display: grid;
+  grid-row-gap: 0.5rem;
+  margin-bottom: 3rem;
+  @include breakpoints(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1rem;
+    grid-template-rows: 1fr;
+  }
+}
+.course {
+  &__heading {
+    font-weight: 100;
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+    @include courses-unveiling;
+    & > .underline {
+      border-bottom: $color-tertiary 3px solid;
+      padding-bottom: 0.3rem;
+    }
+  }
+  &__dishes {
+    list-style: none;
+    display: grid;
+    grid-row-gap: 1rem;
+    padding: 0;
+  }
+}
+.dish {
+  display: grid;
+  grid-template-areas:
+    "heading heading checkbox"
+    "caption price checkbox";
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 84% 6% 18%;
+  @include breakpoints(tab) {
+    grid-template-columns: 1fr 8% 10%;
+  }
+  @include breakpoints(desktop) {
+    grid-template-columns: 84% 6% 18%;
+  }
+  background: white;
+  border-radius: $bd-rad;
+  @include box-shadow(normal);
+  height: 4.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  @include dishes-unveiling;
+  &__heading {
+    grid-area: heading;
+    margin: 0.8rem 0rem 0rem 0.8rem;
+    font-weight: 500;
+    font-size: 18px;
+    @include text-overflow;
+    @include breakpoints(desktop) {
+      margin-right: -2rem;
+    }
+  }
+  &__caption {
+    grid-area: caption;
+    font-weight: 300;
+    font-size: 15px;
+    margin: 0.3rem 0rem 0.5rem 0.8rem;
+    @include text-overflow;
+  }
+  &__price {
+    grid-area: price;
+    align-self: center;
+    padding-bottom: 0.6rem;
+    font-weight: 500;
+    font-size: 15px;
+    margin: 0rem 0.5rem;
+    text-align: center;
+    transform: translateX(160%);
+    transition: transform 350ms cubic-bezier(0.54, 0.13, 0.65, 0.82);
+    @include breakpoints(tab) {
+      font-size: 16px;
+    }
+  }
+  &__checkbox {
+    grid-area: checkbox;
+    background: $color-tertiary;
+    border-radius: 0 $bd-rad * 0.75 $bd-rad * 0.75 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(105%);
+    opacity: 0;
+    transform-origin: right top;
+    transition: transform 400ms cubic-bezier(0.86, 0.06, 0.16, 0.84);
+    & > .fa-check-circle {
+      transform: rotate(0);
+      transition: transform 300ms cubic-bezier(0.17, 0.53, 1, 0.73) 50ms;
+    }
+  }
+  @include breakpoints(desktop) {
+    &:hover {
+      grid-template-columns: 66% 16% 18%;
+      @include box-shadow(hover);
+      & > .dish__heading {
+        margin-right: 3rem;
+      }
+      & > .dish__price {
+        transform: translateX(0);
+      }
+      & > .dish__checkbox {
+        transform: translateX(0);
+        opacity: 1;
+        & > .fa-check-circle {
+          transform: rotate(1turn);
+        }
+      }
+    }
+  }
+  &:focus,
+  &:active {
+    grid-template-columns: 66% 16% 18%;
+    @include box-shadow(focus);
+    & > .dish__heading {
+      margin-right: 3rem;
+    }
+    & > .dish__price {
+      transform: translateX(0);
+    }
+    & > .dish__checkbox {
+      transform: translateX(0);
+      opacity: 1;
+      & > .fa-check-circle {
+        transform: rotate(1turn);
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+
+$colors-gradient: linear-gradient(170deg, $color-secondary, $color-primary);
+
+$bd-rad: 20px;
+
+$bg-greys: (
+  light: #f6f6f6,
+  md: #eaeaea,
+  dark: #353535,
+);
+
+$breakpoints: (
+  tab: 768px,
+  desktop: 1024px,
+);
+
+$blacks-amount: (
+  lower: 90,
+  high: 80,
+  higher: 60,
+);
+
+$grey-icons: #7e7e7e;
+
+$green-txt: #1c8766;
