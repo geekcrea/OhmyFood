@@ -227,13 +227,31 @@ a {
   flex-direction: column;
 }
 @media screen and (min-width: 1024px) {
+  .footer {
+    display: flex;
+    background: #353535;
+    color: white;
+    margin: auto -0.5rem -1rem -1rem;
+    padding: 0.5rem 0rem 1rem 1.5rem;
+} 
+
+  .footer__heading {
+    margin-top: 25px;
+    width: 10%;
+    margin-left: 45px;
+    order: 1;
+  }
+
   .footer__list {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 40px;
     align-items: center;
     text-align: left;
-    width: 50%;
+    width: 80%;
+    padding: 10px;
   
   }
 }
@@ -304,8 +322,9 @@ a {
 .localisation__grid {
   display: grid;
   grid-template-columns: auto auto;
-  width: 50%;
+  width: 60%;
   margin: auto;
+  justify-content: center;
 
 }
 .fa-map-marker-alt{
@@ -718,4 +737,4 @@ input{
   transform: rotate(1turn);
 }
 
-/*# sourceMappingURL=styles.css.map */
+
