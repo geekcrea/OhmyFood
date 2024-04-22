@@ -226,6 +226,10 @@ a {
   display: flex;
   flex-direction: column;
 }
+.legal-notice:hover {
+cursor: default;
+}
+
 @media screen and (min-width: 1024px) {
   .footer {
     display: flex;
@@ -252,6 +256,7 @@ a {
     text-align: left;
     width: 80%;
     padding: 10px;
+    margin-left: 6rem;
   
   }
 }
@@ -281,8 +286,19 @@ a {
   margin-top: -3rem;
   padding: 1rem 1rem 4rem 1rem;
 }
+@media screen and (min-width: 768px) {
+  .container--menus{
+  width: 80%;
+  margin-left: 6rem;
+}
+}
 
-
+@media screen and (min-width: 1024px) {
+.container--menus{
+  width: 80%;
+  margin-left: 6rem;
+}
+}
 .loader {
   width: 100%;
   height: 100%;
@@ -374,8 +390,15 @@ input{
 }
 @media screen and (min-width: 1024px) {
   .instructions {
-    grid-column-gap: 6rem;
+    grid-column-gap: 4rem;
+    width: 80%;
+    padding-left: 6rem;
   }
+
+  .instructions-grid h2{
+    margin-left: 6rem;
+  }
+
 }
 .instructions__item {
   background: #f6f6f6;
@@ -535,9 +558,9 @@ input{
 .courses-prev__image--portrait {
   width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .courses-prev__image--portrait {
-    height: 20rem;
+    height: 23rem;
   }
 }
 
@@ -560,7 +583,6 @@ input{
 }
 @media screen and (min-width: 1024px) {
   .courses-grid {
-    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 1rem;
     grid-template-rows: 1fr;
   }
@@ -590,6 +612,18 @@ input{
   display: grid;
   grid-row-gap: 1rem;
   padding: 0;
+}
+@media screen and (min-width: 1024px) {
+ 
+  .course__heading {
+    margin-left: 9rem;
+  }
+
+  .course__dishes {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
 }
 
 .dish {
