@@ -351,7 +351,14 @@ input{
     border: none;
     font-size: 1rem;
     width: auto;    
-    background-color: #EAEAEA
+    background-color: #EAEAEA;
+    outline: none;
+}
+
+
+input:focus {
+  border: none;       
+  outline: none;       
 }
 
 .presentation {
@@ -391,7 +398,7 @@ input{
 @media screen and (min-width: 1024px) {
   .instructions {
     grid-column-gap: 4rem;
-    width: 80%;
+    width: 83%;
     padding-left: 6rem;
   }
 
@@ -449,9 +456,16 @@ input{
   margin: 0 1rem;
   padding-top: 1rem;
 }
+
 @media screen and (min-width: 768px) {
   .restaurants {
-    margin: 0 2rem;
+    margin: 0 6rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .restaurants {
+    margin: 0 6rem;
   }
 }
 
