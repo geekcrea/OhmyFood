@@ -154,7 +154,8 @@ a {
 }
 @media screen and (min-width: 1024px) {
   .menu-prev__btn{
-    margin: auto 18rem auto auto;
+    margin: auto 22rem auto auto;
+    width: auto;
   }
 }
 
@@ -601,7 +602,10 @@ input:focus {
     font-weight: 300;
     font-size: 1.8rem;
     width: 50%;
-    margin-left: 18rem;
+  
+  }
+  .heading__title_page{
+  margin-left: 20rem;
   }
 }
 .courses-grid {
@@ -721,6 +725,7 @@ input:focus {
     margin-right: -2rem;
   }
 }
+
 .dish__caption {
   grid-area: caption;
   font-weight: 300;
@@ -756,11 +761,12 @@ input:focus {
   transform: translateX(105%);
   opacity: 0;
   transform-origin: right top;
-  transition: transform 400ms cubic-bezier(0.86, 0.06, 0.16, 0.84);
+  transition:  transform 400ms cubic-bezier(0.66, 0.06, 0.16, 0.64);
 }
-.dish__checkbox > .fa-check-circle {
+  
+  .dish__checkbox > .fa-check-circle {
   transform: rotate(0);
-  transition: transform 300ms cubic-bezier(0.17, 0.53, 1, 0.73) 50ms;
+  transition: transform 600ms cubic-bezier(0.17, 0.53, 1, 0.73) 50ms;
 }
 @media screen and (min-width: 1024px) {
   .dish:hover {
