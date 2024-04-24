@@ -606,6 +606,12 @@ input:focus {
   }
   .heading__title_page{
   margin-left: 20rem;
+  color: var(--Black, #101010);
+  font-family: Shrikhand;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   }
 }
 .courses-grid {
