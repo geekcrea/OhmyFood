@@ -57,7 +57,7 @@
   }
 }
 a {
-  cursor: default;
+  cursor: pointer;
 }
 
 body {
@@ -83,6 +83,7 @@ a {
 .fa-arrow-left {
   font-size: 1.2rem;
   margin: 0.5rem;
+  cursor: pointer;
 }
 
 .instructions__item > .fas {
@@ -154,9 +155,10 @@ a {
 }
 @media screen and (min-width: 1024px) {
   .menu-prev__btn{
-    margin: auto 22rem auto auto;
+    margin: auto 1.5rem auto auto;
     width: auto;
   }
+
 }
 
 .menu-prev__btn__img {
@@ -226,6 +228,7 @@ a {
 }
 .footer__heading {
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 .footer__list {
   list-style: none;
@@ -270,6 +273,7 @@ cursor: default;
 .footer__list > .list__item {
   margin: 0.3rem 0rem;
   font-size: 15px;
+  cursor: pointer;
 }
 .footer__list > .email__link:hover, .footer__list > .email__link:active {
   font-weight: bold;
@@ -302,8 +306,8 @@ cursor: default;
 
 @media screen and (min-width: 1024px) {
 .container--menus{
-  width: 80%;
-  margin-left: 6rem;
+  
+  margin-left: 135px;
 }
 }
 .loader {
@@ -405,12 +409,12 @@ input:focus {
 @media screen and (min-width: 1024px) {
   .instructions {
     grid-column-gap: 4rem;
-    width: 83%;
-    padding-left: 6rem;
+    width: 78%;
+    padding-left: 8rem;
   }
 
   .instructions-grid h2{
-    margin-left: 6rem;
+    margin-left: 8rem;
   }
 
 }
@@ -423,6 +427,7 @@ input:focus {
   position: relative;
   z-index: 1;
   font-weight: 500;
+  cursor: pointer;
 }
 .instructions__item > .item__number {
   background: #9356dc;
@@ -466,13 +471,13 @@ input:focus {
 
 @media screen and (min-width: 768px) {
   .restaurants {
-    margin: 0 6rem;
+    margin: 0 7rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .restaurants {
-    margin: 0 6rem;
+    margin: 0 9rem;
   }
 }
 
@@ -497,7 +502,9 @@ input:focus {
   grid-template-areas: "image image" "heading heart";
   grid-template-columns: 80% 20%;
   box-shadow: 3px 5px 5px #e6e6e6;
-}
+ }
+
+
 @media screen and (min-width: 1024px) {
   .menu-prev {
     transform: scale(0.95);
@@ -518,6 +525,7 @@ input:focus {
   width: 100%;
   height: 11rem;
   border-radius: 20px 20px 0px 0px;
+  cursor: pointer;
 }
 .menu-prev__image > .img--portrait {
   object-position: 50% 61%;
@@ -536,6 +544,7 @@ input:focus {
 .menu-prev__heading {
   margin: 0 1rem;
   grid-area: heading;
+  cursor: pointer;
 }
 .menu-prev__heading > .heading__title {
   font-family: "Roboto", sans-serif;
@@ -583,6 +592,17 @@ input:focus {
   .courses-prev__image--portrait {
     height: 23rem;
   }
+
+  .heading {
+    display: flex;           /* Utilise Flexbox pour aligner les éléments enfants */
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center;     /* Centre les éléments verticalement */
+    margin: auto;            /* Ajuste le margin pour centrer le bloc lui-même si nécessaire */
+    gap: 2rem;               /* Ajoute un espace de 2rem entre les éléments enfants */
+}
+
+
+  
 }
 
 .heading {
