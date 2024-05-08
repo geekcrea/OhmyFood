@@ -691,11 +691,6 @@ input:focus {
     font-size: 1.7rem;
   }
 
-  .container--menus {
-    width: 80%;
-    margin-left: 6rem;
-  }
-
   .instructions {
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 1.5rem;
@@ -726,15 +721,15 @@ input:focus {
   }
 }
 
-
 @media screen and (min-width: 1024px) {
   .fa-check-circle {
     font-size: 1.5rem;
   }
 
-  .menu-prev__btn {
+  .menu-prev__btn_page{
     margin: 0;
   }
+
 
   .menu-prev__btn:hover > .empty {
     opacity: 0;
@@ -817,6 +812,8 @@ input:focus {
   .courses-grid {
     grid-column-gap: 1rem;
     grid-template-rows: 1fr;
+    width: 80%;
+    margin: 15px auto;
   }
 
   .dish {
@@ -824,8 +821,8 @@ input:focus {
   }
 
   .dish__heading {
-    margin-right: -2rem; 
- }
+    margin-right: -2rem;
+  }
 
   .dish:hover {
     grid-template-columns: 66% 16% 18%;
@@ -858,22 +855,19 @@ input:focus {
   }
 
   .heading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    gap: 2rem;
+    display: block ruby;
+    text-align: center;
   }
 
   .container--menus {
-    margin-left: 0px;
-  }
-
-  .container--menus {
+    width: 60%;
+    margin-left: 6rem;
     padding: 1rem 5rem 4rem 5rem;
+    margin-left: 0px;
   }
 
   .courses {
     align-items: center;
   }
+  
 }
