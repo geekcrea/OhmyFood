@@ -1,5 +1,4 @@
 body {
-  margin: 0;
   font-family: "Roboto", sans-serif;
   font-size: medium;
 }
@@ -726,10 +725,9 @@ input:focus {
     font-size: 1.5rem;
   }
 
-  .menu-prev__btn_page{
+  .menu-prev__btn_page {
     margin: 0;
   }
-
 
   .menu-prev__btn:hover > .empty {
     opacity: 0;
@@ -869,5 +867,4 @@ input:focus {
   .courses {
     align-items: center;
   }
-  
 }
