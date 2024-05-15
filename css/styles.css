@@ -148,6 +148,26 @@ h1 {
   width: 1.5rem;
 }
 
+.menu-prev__btn:hover .empty {
+  transform: scale(0);
+}
+
+
+.menu-prev__btn:hover .filled {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.menu-prev__btn > .filled {
+  position: absolute;
+  top: 0.16rem;
+  left: 0.45rem;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: bottom;
+  transition: all 400ms cubic-bezier(0.74, -0.12, 0.46, 0.47);
+}
+
 .menu-prev__btn > .empty {
   opacity: 1;
   transition: opacity 250ms cubic-bezier(1, 0, 0.4, 1) 200ms;
@@ -656,6 +676,20 @@ input:focus {
 .dish__checkbox > .fa-check-circle {
   transform: rotate(0);
   transition: transform 600ms cubic-bezier(0.17, 0.53, 1, 0.73) 50ms;
+}
+
+.dish__checkbox > .fa-check-circle :hover {
+  .your-element-class:hover {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.dish__checkbox > .fa-check-circle :hover:none {
+  .your-element-class {
+    transform: translateX(0%);
+    opacity: 1;  
+  }
 }
 
 .dish:focus,
