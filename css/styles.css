@@ -152,7 +152,6 @@ h1 {
   transform: scale(0);
 }
 
-
 .menu-prev__btn:hover .filled {
   transform: scale(1);
   opacity: 1;
@@ -658,6 +657,7 @@ input:focus {
   text-align: center;
   transform: translateX(160%);
   transition: transform 350ms cubic-bezier(0.54, 0.13, 0.65, 0.82);
+  opacity: 1;
 }
 
 .dish__checkbox {
@@ -667,10 +667,11 @@ input:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateX(105%);
   opacity: 0;
-  transform-origin: right top;
-  transition: transform 400ms cubic-bezier(0.66, 0.06, 0.16, 0.64);
+}
+
+.dish_price-check:hover .dish__checkbox {
+  opacity: 1;
 }
 
 .dish__checkbox > .fa-check-circle {
@@ -678,60 +679,34 @@ input:focus {
   transition: transform 600ms cubic-bezier(0.17, 0.53, 1, 0.73) 50ms;
 }
 
-.dish__checkbox > .fa-check-circle :hover {
-  .your-element-class:hover {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-.dish__checkbox > .fa-check-circle :hover:none {
-  .your-element-class {
-    transform: translateX(0%);
-    opacity: 1;  
-  }
-}
-
-.dish:focus,
-.dish:active {
+.dish:hover {
   grid-template-columns: 66% 16% 18%;
   box-shadow: 3px 5px 5px #cccccc;
 }
 
-.dish:focus > .dish__heading,
-.dish:active > .dish__heading {
+
+.dish:hover > .dish__heading {
   margin-right: 3rem;
 }
 
-.dish:focus > .dish__price,
-.dish:active > .dish__price {
+
+.dish:hover > .dish__price {
   transform: translateX(0);
 }
 
-.dish:focus > .dish__checkbox,
-.dish:active > .dish__checkbox {
+.dish:hover > .dish__checkbox {
   transform: translateX(0);
   opacity: 1;
 }
 
-.dish:focus > .dish__checkbox > .fa-check-circle,
-.dish:active > .dish__checkbox > .fa-check-circle {
+
+.dish:hover > .dish__checkbox > .fa-check-circle {
   transform: rotate(1turn);
 }
 
 @media screen and (min-width: 768px) {
   .fa-check-circle {
     font-size: 1.7rem;
-  }
-
-  .instructions {
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 1.5rem;
-    grid-template-rows: 1fr;
-  }
-
-  .restaurants {
-    margin: 0 7rem;
   }
 
   .menus-grid {
@@ -751,6 +726,33 @@ input:focus {
 
   .dish__price {
     font-size: 16px;
+  }
+
+  .footer {
+    display: flex;
+    background: #353535;
+    color: white;
+    margin: auto -0.5rem -1rem -1rem;
+    padding: 0.5rem 0rem 1rem 1.5rem;
+  }
+
+  .footer__heading {
+    margin-top: 25px;
+    width: 10%;
+    margin-left: 45px;
+    order: 1;
+  }
+
+  .footer__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+    text-align: left;
+    width: 80%;
+    padding: 10px;
   }
 }
 
@@ -800,10 +802,13 @@ input:focus {
     margin-left: 6rem;
   }
 
+  
   .instructions {
-    grid-column-gap: 5rem;
+    grid-column-gap: 2rem;
     width: 80%;
     padding-left: 8rem;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100px;
   }
 
   .instructions-grid h2 {
